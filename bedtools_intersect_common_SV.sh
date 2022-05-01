@@ -11,6 +11,7 @@
 module load bio/BEDTools/2.27.1-foss-2018b
 
 # This script loops over individual SV VCFs to remove SVs that overlap with a set of common SVs from dbVar (> 1%) and an in-house control set
+# Split separately into SV type as called by CANVAS and MANTA - CNV, INV, DEL, DUP
 
 SV=$(sed -n ${LSB_JOBINDEX}p sv_list.txt)
 COHORT=cakut_ancestry_matched_controls

@@ -1,5 +1,7 @@
 #!/resources/tools/apps/software/lang/Python/3.7.4-GCCcore-8.3.0/bin/python
+
 # Code written by Catalin Voinescu, UCL
+# This script preferentially keeps cases over controls when related (as defined by kinship coefficient threshold generated using KING)
 
 import sys
 import argparse

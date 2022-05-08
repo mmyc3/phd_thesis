@@ -47,3 +47,9 @@ png(paste0(trait,"_saigegene_manhattan_maf0.001.png"), type="cairo", width=12, h
 par(omi=c(0,0.5,0,0))
 manhattan(d, ylim=c(0,8), cex.axis=0.6, col = c("lightskyblue3", "deepskyblue4"), annotatePval=0.0001, genomewideline =-log10(0.05/length(unique(d$SNP))), suggestiveline = FALSE, chrlabs=c(1:22, "X"))
 dev.off()
+
+# Create qqplot
+png(paste0(trait,"saigegene_qqplot.png"), type = "cairo", units="in", res=300, width=6, height=6)
+par(omi=c(0,0.5,0,0))
+qqPlot(gwas$P)
+dev.off()
